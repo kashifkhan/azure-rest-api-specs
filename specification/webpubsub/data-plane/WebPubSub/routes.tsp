@@ -79,7 +79,7 @@ namespace WebPubSub {
   @summary("Generate token for the client to connect Azure Web PubSub service.")
   @route("/api/hubs/{hub}/:generateToken")
   @post
-  op generateClientToken is Azure.Core.Foundations.Operation<
+  op getClientAccessToken is Azure.Core.Foundations.Operation<
     {
       /**
        * Target hub name, which should start with alphabetic characters and only contain
@@ -496,7 +496,7 @@ namespace WebPubSub {
   @route("/api/hubs/{hub}/groups/{group}/connections")
   @get
   @list
-  op listConnectionsInGroup is Azure.Core.Foundations.Operation<
+  op listConnections is Azure.Core.Foundations.Operation<
     {
       /**
        * Target hub name, which should start with alphabetic characters and only contain
@@ -671,7 +671,7 @@ namespace WebPubSub {
   @summary("Check if a connection has permission to the specified action.")
   @route("/api/hubs/{hub}/permissions/{permission}/connections/{connectionId}")
   @head
-  op checkPermission is Azure.Core.Foundations.Operation<
+  op hasPermission is Azure.Core.Foundations.Operation<
     {
       /**
        * Target hub name, which should start with alphabetic characters and only contain

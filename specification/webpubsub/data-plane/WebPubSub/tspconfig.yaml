@@ -18,7 +18,7 @@ options:
     package-version: "1.3.0"
     flavor: "azure"
     generate-test: true
-    generate-sample: true
+    generate-sample: false
   "@azure-tools/typespec-java":
     package-dir: "azure-messaging-webpubsub"
     package-name: "com.azure.messaging.webpubsub"

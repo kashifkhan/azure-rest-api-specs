@@ -153,5 +153,5 @@ union WebPubSubClientType {
   Default: "Default",
 
   /** MQTT client. */
-  MQTT: "MQTT",
+  MQTT: "mqtt",
 }

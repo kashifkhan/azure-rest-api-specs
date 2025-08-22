@@ -23,6 +23,6 @@
       }
     }
   },
-  "operationId": "ListConnectionsInGroup",
-  "title": "ListConnectionsInGroup"
+  "operationId": "ListConnections",
+  "title": "ListConnections"
 }

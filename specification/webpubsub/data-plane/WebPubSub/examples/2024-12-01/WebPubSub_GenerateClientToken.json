@@ -13,6 +13,6 @@
       }
     }
   },
-  "operationId": "GenerateClientToken",
-  "title": "GenerateClientToken"
+  "operationId": "GetClientAccessToken",
+  "title": "GetClientAccessToken"
 }

@@ -200,7 +200,7 @@
     },
     "/api/hubs/{hub}/:generateToken": {
       "post": {
-        "operationId": "GenerateClientToken",
+        "operationId": "GetClientAccessToken",
         "summary": "Generate token for the client to connect Azure Web PubSub service.",
         "description": "Generate token for the client to connect Azure Web PubSub service.",
         "produces": [
@@ -267,7 +267,7 @@
             "default": "Default",
             "enum": [
               "Default",
-              "MQTT"
+              "mqtt"
             ],
             "x-ms-enum": {
               "name": "WebPubSubClientType",
@@ -280,7 +280,7 @@
                 },
                 {
                   "name": "MQTT",
-                  "value": "MQTT",
+                  "value": "mqtt",
                   "description": "MQTT client."
                 }
               ]
@@ -308,7 +308,7 @@
           }
         },
         "x-ms-examples": {
-          "GenerateClientToken": {
+          "GetClientAccessToken": {
             "$ref": "./examples/WebPubSub_GenerateClientToken.json"
           }
         }
@@ -902,7 +902,7 @@
     },
     "/api/hubs/{hub}/groups/{group}/connections": {
       "get": {
-        "operationId": "ListConnectionsInGroup",
+        "operationId": "ListConnections",
         "summary": "List connections in a group.",
         "description": "List connections in a group.",
         "parameters": [
@@ -976,7 +976,7 @@
           }
         },
         "x-ms-examples": {
-          "ListConnectionsInGroup": {
+          "ListConnections": {
             "$ref": "./examples/WebPubSub_ListConnectionsInGroup.json"
           }
         },
@@ -1269,7 +1269,7 @@
         }
       },
       "head": {
-        "operationId": "CheckPermission",
+        "operationId": "HasPermission",
         "summary": "Check if a connection has permission to the specified action.",
         "description": "Check if a connection has permission to the specified action.",
         "parameters": [
@@ -1348,7 +1348,7 @@
           }
         },
         "x-ms-examples": {
-          "CheckPermission": {
+          "HasPermission": {
             "$ref": "./examples/WebPubSub_CheckPermission.json"
           }
         }
@@ -1970,7 +1970,7 @@
       "description": "Web PubSub client type",
       "enum": [
         "Default",
-        "MQTT"
+        "mqtt"
       ],
       "x-ms-enum": {
         "name": "WebPubSubClientType",
@@ -1983,7 +1983,7 @@
           },
           {
             "name": "MQTT",
-            "value": "MQTT",
+            "value": "mqtt",
             "description": "MQTT client."
           }
         ]

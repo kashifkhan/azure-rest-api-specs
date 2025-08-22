@@ -17,3 +17,5 @@ model WebPubSubClientOptions {
     parameters: WebPubSubClientOptions,
   }
 );
+
+@@clientName(WebPubSub, "WebPubSubServiceClient");

@@ -10,6 +10,6 @@
     "200": {},
     "404": {}
   },
-  "operationId": "CheckPermission",
-  "title": "CheckPermission"
+  "operationId": "HasPermission",
+  "title": "HasPermission"
 }
