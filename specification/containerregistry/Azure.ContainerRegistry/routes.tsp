@@ -7,7 +7,7 @@ using TypeSpec.Rest;
 using TypeSpec.Http;
 using TypeSpec.OpenAPI;
 
-namespace AzureContainerRegistry;
+namespace ContainerRegistryService;
 
 interface ContainerRegistry {
   /**
@@ -213,7 +213,7 @@ interface ContainerRegistry {
        * orderby query parameter
        */
       @query("orderby")
-      orderby?: string;
+      orderby?: ArtifactTagOrder;
 
       /**
        * filter by digest
@@ -330,7 +330,7 @@ interface ContainerRegistry {
        * orderby query parameter
        */
       @query("orderby")
-      orderby?: string;
+      orderby?: ArtifactManifestOrder;
     },
     AcrManifests
   >;

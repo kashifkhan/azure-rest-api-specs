@@ -6,7 +6,7 @@ using TypeSpec.Rest;
 using TypeSpec.Http;
 using Azure.Core;
 
-namespace AzureContainerRegistry;
+namespace ContainerRegistryService;
 
 /** The multipart body parameter for AAD token exchange. */
 model MultipartBodyParameter {
@@ -191,7 +191,7 @@ union TokenGrantType {
 /**
  * Sort options for ordering tags in a collection.
  */
-union ArtifactTagOrderBy {
+union ArtifactTagOrder {
   string,
 
   /**
@@ -215,7 +215,7 @@ union ArtifactTagOrderBy {
 /**
  * Sort options for ordering manifests in a collection.
  */
-union ArtifactManifestOrderBy {
+union ArtifactManifestOrder {
   string,
 
   /**

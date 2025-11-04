@@ -408,7 +408,33 @@
             "in": "query",
             "description": "orderby query parameter",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "none",
+              "timedesc",
+              "timeasc"
+            ],
+            "x-ms-enum": {
+              "name": "ArtifactManifestOrder",
+              "modelAsString": true,
+              "values": [
+                {
+                  "name": "None",
+                  "value": "none",
+                  "description": "Do not provide an orderby value in the request."
+                },
+                {
+                  "name": "LastUpdatedOnDescending",
+                  "value": "timedesc",
+                  "description": "Order manifests by LastUpdatedOn field, from most recently updated to least\nrecently updated."
+                },
+                {
+                  "name": "LastUpdatedOnAscending",
+                  "value": "timeasc",
+                  "description": "Order manifest by LastUpdatedOn field, from least recently updated to most\nrecently updated."
+                }
+              ]
+            }
           }
         ],
         "responses": {
@@ -580,7 +606,33 @@
             "in": "query",
             "description": "orderby query parameter",
             "required": false,
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "none",
+              "timedesc",
+              "timeasc"
+            ],
+            "x-ms-enum": {
+              "name": "ArtifactTagOrder",
+              "modelAsString": true,
+              "values": [
+                {
+                  "name": "None",
+                  "value": "none",
+                  "description": "Do not provide an orderby value in the request."
+                },
+                {
+                  "name": "LastUpdatedOnDescending",
+                  "value": "timedesc",
+                  "description": "Order tags by LastUpdatedOn field, from most recently updated to least recently\nupdated."
+                },
+                {
+                  "name": "LastUpdatedOnAscending",
+                  "value": "timeasc",
+                  "description": "Order tags by LastUpdatedOn field, from least recently updated to most recently\nupdated."
+                }
+              ]
+            }
           },
           {
             "name": "digest",
@@ -1820,7 +1872,7 @@
         ]
       }
     },
-    "ArtifactManifestOrderBy": {
+    "ArtifactManifestOrder": {
       "type": "string",
       "description": "Sort options for ordering manifests in a collection.",
       "enum": [
@@ -1829,7 +1881,7 @@
         "timeasc"
       ],
       "x-ms-enum": {
-        "name": "ArtifactManifestOrderBy",
+        "name": "ArtifactManifestOrder",
         "modelAsString": true,
         "values": [
           {
@@ -1997,7 +2049,7 @@
         ]
       }
     },
-    "ArtifactTagOrderBy": {
+    "ArtifactTagOrder": {
       "type": "string",
       "description": "Sort options for ordering tags in a collection.",
       "enum": [
@@ -2006,7 +2058,7 @@
         "timeasc"
       ],
       "x-ms-enum": {
-        "name": "ArtifactTagOrderBy",
+        "name": "ArtifactTagOrder",
         "modelAsString": true,
         "values": [
           {
